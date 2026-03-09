@@ -22,7 +22,7 @@ app.set('view engine', 'ejs');
 
 app.set('views',path.resolve(__dirname,'views'));
 
-
+app.use(express.static(__dirname)); 
 
 
 
@@ -44,8 +44,9 @@ app.put('/projetos/put',async(req:Request,res:Response)=>{
 app.get('/', (req: Request, res: Response) => {
   res.render('index');
 });
-app.get('/certificacoes',(req: Request, res: Response) => {
-  res.render('sobre',{logado:logado});
+app.get('/certificacoes', async(req: Request, res: Response) => {
+   let certificacoes=await Crud.getCert()
+  res.render('sobre',{logado:logado ,certificacoes:certificacoes});
 })
 app.get('/login',(req:Request,res:Response)=>{
 
@@ -73,9 +74,32 @@ app.post('/projetos', async(req:Request,res:Response)=>{
     let descricao:string = req.body.descricao;
     let link:string= req.body.link;
      await Crud.criarProj(nome,descricao,link,tecnologias);
-      res.redirect('/projetos')
+      res.redirect('/projetos') 
 })
 
+app.post('/certificacoes',async(req:Request,res:Response)=>{
+   let nome:string=req.body.nome
+   let instituicao:string=req.body.instituicao
+   let status: "Concluido" |"Cursando"=req.body.status
+   await Crud.criarCert(nome,instituicao,status)
+   res.redirect('/certificacoes')
+})
+
+app.delete('/certificacoes/delete',async(req:Request,res:Response)=>{
+   let nome:string=req.body.nome;
+     await Crud.delCert(nome)
+      res.redirect('/certificacoes')
+
+})
+
+app.put('/certificacoes/put',async(req:Request,res:Response)=>{
+    let nome:string=req.body.nome;
+    let instituicao:string=req.body.instituicao
+    let status:"Cursando"|"Concluido"=req.body.status
+   
+   await Crud.putCert(nome,instituicao,status);
+      res.redirect('/certificacoes')
+})
 
 
 
