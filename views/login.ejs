@@ -9,37 +9,38 @@
 <body class="bg-gray-300 min-h-screen flex items-center justify-center p-4">
     
     <div class="bg-white rounded-xl shadow-md w-full max-w-sm">
-        <!-- Header simples -->
+     
         <div class="p-6 pb-2">
             <h1 class="text-2xl text-gray-800">Acesso</h1>
             <p class="text-sm text-gray-500">Digite suas credenciais</p>
         </div>
 
-        <!-- Formulário -->
-        <form class="p-6 pt-2 space-y-4">
-            <!-- Email -->
+  
+        <form action="/login" method="POST" class="p-6 pt-2 space-y-4">
+       
             <div>
                 <label class="block text-sm text-gray-600 mb-1">Email</label>
                 <input 
                     type="email" 
+                    name="email"
                     class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-blue-400"
                     placeholder="seu@email.com"
                     required
                 >
             </div>
 
-            <!-- Senha -->
+          
             <div>
                 <label class="block text-sm text-gray-600 mb-1">Senha</label>
                 <input 
                     type="password" 
+                    name="senha"
                     class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-blue-400"
                     placeholder="••••••"
                     required
                 >
             </div>
 
-            <!-- Botão -->
             <button 
                 type="submit"
                 class="w-full bg-gray-600 text-white text-sm py-2 rounded hover:bg-gray-700 transition"
@@ -47,7 +48,7 @@
                 Entrar
             </button>
 
-            <!-- Rodapé -->
+         
             <p class="text-center text-xs text-gray-400 pt-3">
                 © 2026 Hugo Leonardo
             </p>

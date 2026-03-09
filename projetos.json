@@ -1,0 +1,34 @@
+[
+    {
+        "titulo": "Análise de dados",
+        "tecnologias": [
+            "Pandas",
+            "Flask",
+            "JavaScript",
+            "Html",
+            "Css"
+        ],
+        "link": "",
+        "descricao": "Neste projeto, atuei na linha de frente técnica e estratégica. Como Product Owner (PO), fui responsável pela visão geral do produto e por parte elaboração da documentação técnica. No desenvolvimento, executei todo o processo de ETL, utilizando a biblioteca Pandas para o tratamento, limpeza e manipulação de grandes volumes de dados. No back-end, utilizei Flask para estruturar a lógica do projeto e garantir a integração eficiente entre os dados processados e a entrega final."
+    },
+    {
+        "titulo": "Gerenciador de Senhas",
+        "tecnologias": [
+            "Flask",
+            "JavaScript",
+            "Html",
+            "Css"
+        ],
+        "link": "",
+        "descricao": "Realizei a modelagem do banco de dados, garantindo a integridade e o relacionamento dos dados. No back-end (Flask), implementei camadas rigorosas de segurança através de algoritmos de criptografia e hash para proteção de informações sensíveis. No front-end, desenvolvi funcionalidades avançadas de filtragem utilizando JavaScript."
+    },
+    {
+        "titulo": "jfdjf",
+        "tecnologias": [
+            "react",
+            "flask"
+        ],
+        "descricao": "fmdmdf",
+        "link": "https://github.com/HUGO0895/devweb2-P"
+    }
+]
