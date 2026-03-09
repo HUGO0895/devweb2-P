@@ -30,7 +30,6 @@ app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// ============ DADOS INICIAIS ============
 let certificacoes: Array<Certificacoes> = [
     {
         "nome": "Python Bradesco",
@@ -71,14 +70,12 @@ let projetos: Array<Projeto> = [
     }
 ];
 
-// ============ ROTAS PRINCIPAIS ============
+
 app.get('/', (req: Request, res: Response) => {
     res.render('index');
 });
 
-// ============ CRUD PROJETOS ============
 
-// READ - Listar projetos
 app.get('/projetos', (req: Request, res: Response) => {
     res.render('projetos', { 
         logado: logado, 
@@ -86,7 +83,7 @@ app.get('/projetos', (req: Request, res: Response) => {
     });
 });
 
-// CREATE - Criar projeto
+
 app.post('/projetos', (req: Request, res: Response) => {
     try {
         const nome: string = req.body.titulo;
@@ -110,7 +107,6 @@ app.post('/projetos', (req: Request, res: Response) => {
     }
 });
 
-// UPDATE - Atualizar projeto
 app.put('/projetos/put', (req: Request, res: Response) => {
     try {
         const nome: string = req.body.titulo;
@@ -136,7 +132,7 @@ app.put('/projetos/put', (req: Request, res: Response) => {
     }
 });
 
-// DELETE - Deletar projeto
+
 app.delete('/projetos/delete', (req: Request, res: Response) => {
     try {
         const titulo: string = req.body.titulo;
@@ -148,9 +144,6 @@ app.delete('/projetos/delete', (req: Request, res: Response) => {
     }
 });
 
-// ============ CRUD CERTIFICAÇÕES ============
-
-// READ - Listar certificações
 app.get('/certificacoes', (req: Request, res: Response) => {
     res.render('sobre', { 
         logado: logado, 
@@ -158,7 +151,7 @@ app.get('/certificacoes', (req: Request, res: Response) => {
     });
 });
 
-// CREATE - Criar certificação
+
 app.post('/certificacoes', (req: Request, res: Response) => {
     try {
         const nome: string = req.body.nome;
@@ -187,7 +180,7 @@ app.post('/certificacoes', (req: Request, res: Response) => {
     }
 });
 
-// UPDATE - Atualizar certificação
+
 app.put('/certificacoes/put', (req: Request, res: Response) => {
     try {
         const nome: string = req.body.nome;
@@ -196,14 +189,14 @@ app.put('/certificacoes/put', (req: Request, res: Response) => {
 
         const index = certificacoes.findIndex(c => c.nome === nome);
         
-        // 🔥 FIX: Verifica se index existe antes de usar
+       
         if (index !== -1 && certificacoes[index]) {
             // Atualiza instituição se fornecida
             if (instituicao && certificacoes[index]) {
                 certificacoes[index].instituicao = instituicao;
             }
             
-            // Atualiza status se fornecida e válida
+        
             if (statusInput && certificacoes[index]) {
                 if (statusInput === "Concluido") {
                     certificacoes[index].status = "Concluido";
@@ -220,7 +213,7 @@ app.put('/certificacoes/put', (req: Request, res: Response) => {
     }
 });
 
-// DELETE - Deletar certificação
+
 app.delete('/certificacoes/delete', (req: Request, res: Response) => {
     try {
         const nome: string = req.body.nome;
@@ -232,7 +225,7 @@ app.delete('/certificacoes/delete', (req: Request, res: Response) => {
     }
 });
 
-// ============ AUTENTICAÇÃO ============
+
 app.get('/login', (req: Request, res: Response) => {
     res.render('login');
 });
@@ -250,7 +243,6 @@ app.post('/login', (req: Request, res: Response) => {
     }
 });
 
-// ============ INICIAR SERVIDOR ============
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });
