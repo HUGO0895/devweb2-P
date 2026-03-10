@@ -15,7 +15,9 @@
             <figure class="hover:scale-110 transition duration-500"> 
                 <img src="/img/hugo_logo.svg" width="200px" alt="Logo"> 
             </figure>
-           <div > <h1  id="titulo" class="text-4xl md:text-5xl hover:scale-105 transition duration-500 inline-block cursor-default"></h1></div>
+          <div class="hidden md:block">
+  <h1 id="titulo" class="text-4xl md:text-5xl hover:scale-105 transition duration-500 inline-block cursor-default"></h1>
+</div>
             
             <div class="flex gap-2">
                 <div class="hover:bg-gray-400/30 transition duration-500 rounded-lg group relative flex flex-col items-center p-2">
@@ -232,51 +234,49 @@
     <div>
         <p class="font-bold text-lg mb-4 text-gray-900">Soft Skills</p>
         
-        <div class="flex flex-wrap justify-center gap-8 mb-6 ">
+       <div class="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 mb-6 px-2">
            
-            <div class="group relative flex flex-col items-center cursor-pointer ">
-                <span class="text-5xl group-hover:scale-110 transition-transform mb-2">💬</span>
-                <span class="text-sm font-medium text-gray-700">Comunicação</span>
-                <div class="absolute bottom-full mb-2 hidden group-hover:block bg-gray-800 text-white text-sm rounded-lg p-3 w-48 z-10 shadow-lg">
-                    💬 Comunicação: Capacidade de expressar ideias claramente, ouvir ativamente e manter diálogo efetivo com colegas e clientes.
-                </div>
-            </div>
-            
-          
-            <div class="group relative flex flex-col items-center cursor-pointer">
-                <span class="text-5xl group-hover:scale-110 transition-transform mb-2">🤝</span>
-                <span class="text-sm font-medium text-gray-700">Trabalho em Equipe</span>
-                <div class="absolute bottom-full mb-2 hidden group-hover:block bg-gray-800 text-white text-sm rounded-lg p-3 w-48 z-10 shadow-lg">
-                    🤝 Trabalho em Equipe: Habilidade para colaborar, compartilhar conhecimento e contribuir para objetivos comuns no ambiente de desenvolvimento.
-                </div>
-            </div>
-            
-           
-            <div class="group relative flex flex-col items-center cursor-pointer">
-                <span class="text-5xl group-hover:scale-110 transition-transform mb-2">🧩</span>
-                <span class="text-sm font-medium text-gray-700">Resolução de Problemas</span>
-                <div class="absolute bottom-full mb-2 hidden group-hover:block bg-gray-800 text-white text-sm rounded-lg p-3 w-48 z-10 shadow-lg">
-                    🧩 Resolução de Problemas: Aptidão para analisar desafios complexos, encontrar soluções criativas e implementar correções eficientes.
-                </div>
-            </div>
-            
-       
-            <div class="group relative flex flex-col items-center cursor-pointer">
-                <span class="text-5xl group-hover:scale-110 transition-transform mb-2">🔄</span>
-                <span class="text-sm font-medium text-gray-700">Adaptabilidade</span>
-                <div class="absolute bottom-full mb-2 hidden group-hover:block bg-gray-800 text-white text-sm rounded-lg p-3 w-48 z-10 shadow-lg">
-                    🔄 Adaptabilidade: Flexibilidade para aprender novas tecnologias, se ajustar a mudanças de requisitos e evoluir com o mercado.
-                </div>
-            </div>
-            
-         
-            <div class="group relative flex flex-col items-center cursor-pointer">
-                <span class="text-5xl group-hover:scale-110 transition-transform mb-2">💡</span>
-                <span class="text-sm font-medium text-gray-700">Criatividade</span>
-                <div class="absolute bottom-full mb-2 hidden group-hover:block bg-gray-800 text-white text-sm rounded-lg p-3 w-48 z-10 shadow-lg">
-                    💡 Criatividade: Pensamento inovador para criar soluções originais e melhorar processos existentes no desenvolvimento de software.
-                </div>
-            </div>
+    <div class="group relative flex flex-col items-center cursor-pointer w-[calc(50%-1rem)] sm:w-auto">
+        <span class="text-4xl sm:text-5xl group-hover:scale-110 transition-transform mb-2">💬</span>
+        <span class="text-xs sm:text-sm font-medium text-gray-700 text-center">Comunicação</span>
+        <div class="absolute bottom-full mb-2 hidden group-hover:block bg-gray-800 text-white text-xs sm:text-sm rounded-lg p-2 sm:p-3 w-40 sm:w-48 z-10 shadow-lg">
+            💬 Comunicação: Capacidade de expressar ideias claramente, ouvir ativamente e manter diálogo efetivo com colegas e clientes.
+        </div>
+    </div>
+    
+    <div class="group relative flex flex-col items-center cursor-pointer w-[calc(50%-1rem)] sm:w-auto">
+        <span class="text-4xl sm:text-5xl group-hover:scale-110 transition-transform mb-2">🤝</span>
+        <span class="text-xs sm:text-sm font-medium text-gray-700 text-center">Trabalho em Equipe</span>
+        <div class="absolute bottom-full mb-2 hidden group-hover:block bg-gray-800 text-white text-xs sm:text-sm rounded-lg p-2 sm:p-3 w-40 sm:w-48 z-10 shadow-lg">
+            🤝 Trabalho em Equipe: Habilidade para colaborar, compartilhar conhecimento e contribuir para objetivos comuns no ambiente de desenvolvimento.
+        </div>
+    </div>
+    
+    <div class="group relative flex flex-col items-center cursor-pointer w-[calc(50%-1rem)] sm:w-auto">
+        <span class="text-4xl sm:text-5xl group-hover:scale-110 transition-transform mb-2">🧩</span>
+        <span class="text-xs sm:text-sm font-medium text-gray-700 text-center">Resolução de Problemas</span>
+        <div class="absolute bottom-full mb-2 hidden group-hover:block bg-gray-800 text-white text-xs sm:text-sm rounded-lg p-2 sm:p-3 w-40 sm:w-48 z-10 shadow-lg">
+            🧩 Resolução de Problemas: Aptidão para analisar desafios complexos, encontrar soluções criativas e implementar correções eficientes.
+        </div>
+    </div>
+    
+    <div class="group relative flex flex-col items-center cursor-pointer w-[calc(50%-1rem)] sm:w-auto">
+        <span class="text-4xl sm:text-5xl group-hover:scale-110 transition-transform mb-2">🔄</span>
+        <span class="text-xs sm:text-sm font-medium text-gray-700 text-center">Adaptabilidade</span>
+        <div class="absolute bottom-full mb-2 hidden group-hover:block bg-gray-800 text-white text-xs sm:text-sm rounded-lg p-2 sm:p-3 w-40 sm:w-48 z-10 shadow-lg">
+            🔄 Adaptabilidade: Flexibilidade para aprender novas tecnologias, se ajustar a mudanças de requisitos e evoluir com o mercado.
+        </div>
+    </div>
+    
+    <div class="group relative flex flex-col items-center cursor-pointer w-[calc(50%-1rem)] sm:w-auto">
+        <span class="text-4xl sm:text-5xl group-hover:scale-110 transition-transform mb-2">💡</span>
+        <span class="text-xs sm:text-sm font-medium text-gray-700 text-center">Criatividade</span>
+        <div class="absolute bottom-full mb-2 hidden group-hover:block bg-gray-800 text-white text-xs sm:text-sm rounded-lg p-2 sm:p-3 w-40 sm:w-48 z-10 shadow-lg">
+            💡 Criatividade: Pensamento inovador para criar soluções originais e melhorar processos existentes no desenvolvimento de software.
+        </div>
+    </div>
+    
+</div>
         </div>
         
       
